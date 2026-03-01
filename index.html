@@ -5,71 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <link rel="stylesheet" href="styles/styles.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <!-- header -->
-    <section id="header">
-        <div class="container">
+    <section id="navbar">
+        <div class="container d-flex flex-row align-items-center justify-content-between">
             <div>
                 <h1 id="logo">Portfolio</h1>
             </div>
             <div class="menu">
                 <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Skills</a>
-                <a href="">Projects</a>
-                <a href="">Experience</a>
-                <a href="">Education</a>
-                <a href="">Contact</a>
+                <a href="#about-me">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#work-experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#contact-me">Contact</a>
             </div>
         </div>
     </section>
 
     <section id="hero">
-        <div class="container">
-            <div class="text-container">
-                <h1>Hello, I'm John Doe</h1>
-                <h6>Fullstack Web Developer</h6>
-                <p>I create beautiful, functional, and user-friendly websites and applications. </p>
-                <p>Passionate about clean
-                    code
-                    and innovative solutions.</p>
+        <div class="container d-flex flex-row align-items-center">
+            <div class="d-flex flex-column align-items-start text-anim">
+                <h1 class="heading">Hello, I'm John Doe</h1>
+                <h6 class="mb-4">Fullstack Web Developer</h6>
+                <p>I create beautiful, functional, and user-friendly websites and applications.
+                    <br>
+                    Passionate about clean code and innovative solutions.
+                </p>
             </div>
-
-            <img src="images/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.avif"
-                class="image">
+            <div class="ms-auto align-self-end">
+                <img src="images/Alan_Partridge.webp" alt="hero-image" class="img-fluid img-anim" id="hero-image">
+            </div>
         </div>
     </section>
 
-    <section id="aboutme">
-        <div class="container">
-            <div class="heading">
+    <section id="about-me">
+        <div class="container d-flex flex-column align-items-center">
+
+            <div class="section-heading">
                 <h1>About me</h1>
-                <h4>Get to know me better</h4>
+                <h6>Get to know me better</h6>
             </div>
-            <div class="row">
-                <div class="col-6">
-                    <img src="images/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.avif"
-                        alt="" class="image">
-                </div>
-                <div class="col-6">
-                    <div class="text-container">
-                        <h6>I'm a passionate Full Stack Developer with 5+ years of experience in building web
-                            applications. I specialize in modern JavaScript frameworks and love turning complex problems
-                            into simple, beautiful solutions.
-                        </h6>
-                        <br>
-                        <h6>When I'm not coding, you'll find me exploring new technologies, contributing to open-source
-                            projects, or sharing knowledge with the developer community. I believe in continuous
-                            learning and staying updated with the latest industry trends.</h6>
-                        <br>
-                        <h6>My goal is to create digital experiences that not only look great but also provide
-                            exceptional user experiences and solve real-world problems.</h6>
-                    </div>
+
+            <div class="d-flex flex-row gap-5">
+                <img src="images/3506.jpg" alt="profile" class="img-anim">
+                <div class="d-flex flex-column justify-content-center gap-3 text-anim">
+                    <p>
+                        I'm a passionate Full Stack Developer with 5+ years of experience in building web
+                        applications. I specialize in modern JavaScript frameworks and love turning complex
+                        problems into simple, beautiful solutions.
+                    </p>
+                    <p>
+                        When I'm not coding, you'll find me exploring new technologies, contributing to
+                        open-source projects, or sharing knowledge with the developer community.
+                    </p>
+                    <p>
+                        My goal is to create digital experiences that not only look great but also provide
+                        exceptional user experiences and solve real-world problems.
+                    </p>
                 </div>
             </div>
         </div>
@@ -77,119 +83,123 @@
 
     <section id="skills">
         <div class="container">
-            <div class="heading">
-                <h1 class="">Skills</h1>
-                <h4>Technologies I work with</h4>
+
+            <div class="section-heading">
+                <h2>Skills</h2>
+                <p>Technologies I work with</p>
             </div>
 
             <div class="observer-wrapper">
-                <div class="row">
-                    <div class="col-12 col-md-4 skill-card-container">
-                        <div class="card skillCard">
-                            <div class="card-img-container">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="frontend-logo">
-                                    <polyline points="16 18 22 12 16 6"></polyline>
-                                    <polyline points="8 6 2 12 8 18"></polyline>
-                                </svg>
-                            </div>
-                            <div class="card-body">
+                <div class="row g-4 justify-content-center">
+
+                    <div class="col-md-6 col-lg-4 show-card-anim">
+                        <div class="card card-hover h-100">
+
+                            <div class="card-heading text-center">
+                                <i class="bi bi-code-slash"></i>
                                 <h5 class="card-title">Frontend</h5>
-                                <div class="skill-item">
-                                    <label>HTML</label>
-                                    <div class="progress-track">
-                                        <div class="progress-fill" style="width: 80%;"></div>
+                            </div>
+
+                            <div class="progresses text-uppercase">
+                                <div class="progress-group">
+                                    <p>HTML</p>
+                                    <div class="progress" role="progressbar" aria-label="Basic example"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 80%"></div>
                                     </div>
                                 </div>
 
-                                <div class="skill-item">
-                                    <label>CSS</label>
-                                    <div class="progress-track">
-                                        <div class="progress-fill" style="width: 85%;"></div>
+                                <div class="progress-group">
+                                    <p>CSS</p>
+                                    <div class="progress" role="progressbar" aria-label="Basic example"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 85%"></div>
                                     </div>
                                 </div>
 
-                                <div class="skill-item">
-                                    <label>JAVASCRIPT</label>
-                                    <div class="progress-track">
-                                        <div class="progress-fill" style="width: 40%;"></div>
+                                <div class="progress-group">
+                                    <p>JavaScript</p>
+                                    <div class="progress" role="progressbar" aria-label="Basic example"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 55%"></div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
-                    <div class="col-12 col-md-4 skill-card-container">
-                        <div class="card skillCard">
-                            <div class="card-img-container">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="skill-logo">
-                                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
-                                </svg>
-                            </div>
-                            <div class="card-body">
+
+                    <div class="col-md-6 col-lg-4 show-card-anim">
+                        <div class="card card-hover h-100">
+
+                            <div class="card-heading text-center">
+                                <i class="bi bi-database"></i>
                                 <h5 class="card-title">Backend</h5>
-                                <div class="skill-item">
-                                    <label>PHP</label>
-                                    <div class="progress-track">
-                                        <div class="progress-fill" style="width: 50%;"></div>
+                            </div>
+
+                            <div class="progresses text-uppercase">
+                                <div class="progress-group">
+                                    <p>PHP</p>
+                                    <div class="progress" role="progressbar" aria-label="Basic example"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 69%"></div>
                                     </div>
                                 </div>
 
-                                <div class="skill-item">
-                                    <label>PYTHON</label>
-                                    <div class="progress-track">
-                                        <div class="progress-fill" style="width: 75%;"></div>
+                                <div class="progress-group">
+                                    <p>Python</p>
+                                    <div class="progress" role="progressbar" aria-label="Basic example"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 90%"></div>
                                     </div>
                                 </div>
 
-                                <div class="skill-item">
-                                    <label>MYSQL</label>
-                                    <div class="progress-track">
-                                        <div class="progress-fill" style="width: 90%;"></div>
+                                <div class="progress-group">
+                                    <p>MySQL</p>
+                                    <div class="progress" role="progressbar" aria-label="Basic example"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 50%"></div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
-                    <div class="col-12 col-md-4 skill-card-container">
-                        <div class="card skillCard">
-                            <div class="card-img-container">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="skill-logo">
-                                    <path
-                                        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="card-body">
+
+                    <div class="col-md-6 col-lg-4 show-card-anim">
+                        <div class="card card-hover h-100">
+
+                            <div class="card-heading text-center">
+                                <i class="bi bi-wrench"></i>
                                 <h5 class="card-title">Tools</h5>
-                                <div class="skill-item">
-                                    <label>VSCODE</label>
-                                    <div class="progress-track">
-                                        <div class="progress-fill" style="width: 90%;"></div>
+                            </div>
+
+                            <div class="progresses text-uppercase">
+                                <div class="progress-group">
+                                    <p>VSCode</p>
+                                    <div class="progress" role="progressbar" aria-label="Basic example"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 88%"></div>
                                     </div>
                                 </div>
 
-                                <div class="skill-item">
-                                    <label>FIGMA</label>
-                                    <div class="progress-track">
-                                        <div class="progress-fill" style="width: 55%;"></div>
+                                <div class="progress-group">
+                                    <p>Figma</p>
+                                    <div class="progress" role="progressbar" aria-label="Basic example"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 50%"></div>
                                     </div>
                                 </div>
 
-                                <div class="skill-item">
-                                    <label>XAMPP</label>
-                                    <div class="progress-track">
-                                        <div class="progress-fill" style="width: 40%;"></div>
+                                <div class="progress-group">
+                                    <p>XAMPP</p>
+                                    <div class="progress" role="progressbar" aria-label="Basic example"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 25%"></div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -199,51 +209,48 @@
 
     <section id="projects">
         <div class="container">
-            <div class="heading">
-                <h1>Projects</h1>
-                <h4>Some of my recent work</h4>
-            </div>
-
             <div class="observer-wrapper">
-                <div class="row">
-                    <div class="col-12 col-md-4 project-card-container">
-                        <div class="card projectCard">
-                            <img src="/images/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.avif"
-                                class="card-img-top" alt="...">
-                            <div class="card-body">
+
+                <div class="section-heading">
+                    <h1>Projects</h1>
+                    <p>Some of my recent works</p>
+                </div>
+
+                <div class="row g-sm-3 g-md-4">
+                    <div class="col-lg-4 show-card-anim">
+                        <div class="card h-100">
+                            <img src="/images/xitter-landscape-stripes.png" class="card-img-top" alt="xitter">
+                            <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Xitter</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card’s content.</p>
-                                <a href="#" class="projectBtn">View Project</a>
+                                <p class="card-text">A full-featured e-commerce platform with payment integration, user
+                                    authentication, and admin dashboard.</p>
+                                <a href="#" class="button button-primary mt-auto align-self-start">View Project</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-12 col-md-4 project-card-container">
-                        <div class="card projectCard">
-                            <img src="/images/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.avif"
-                                class="card-img-top" alt="...">
-                            <div class="card-body">
+                    <div class="col-lg-4 show-card-anim">
+                        <div class="card h-100">
+                            <img src="/images/pomodoro.png" class="card-img-top" alt="pomodoro">
+                            <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Pomodoro</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card’s content.</p>
-                                <a href="#" class="projectBtn">View Project</a>
+                                <p class="card-text">A collaborative task management application with real-time updates
+                                    and
+                                    team collaboration features.</p>
+                                <a href="#" class="button button-primary mt-auto align-self-start">View Project</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-12 col-md-4 project-card-container">
-                        <div class="card projectCard">
-                            <img src="/images/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.avif"
-                                class="card-img-top" alt="...">
-                            <div class="card-body">
+                    <div class="col-lg-4 show-card-anim">
+                        <div class="card h-100">
+                            <img src="/images/sharpee.png" class="card-img-top" alt="sharpee">
+                            <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Sharpee</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card’s content.</p>
-                                <a href="#" class="projectBtn">View Project</a>
+                                <p class="card-text">Analytics dashboard for social media management with data
+                                    visualization
+                                    and scheduling capabilities.</p>
+                                <a href="#" class="button button-primary mt-auto align-self-start">View Project</a>
                             </div>
                         </div>
                     </div>
@@ -252,58 +259,43 @@
         </div>
     </section>
 
-    <section id="workexperience">
+    <section id="work-experience">
         <div class="container">
-            <div class="heading">
+
+            <div class="section-heading">
                 <h1>Work Experience</h1>
-                <h4>My professional journey</h4>
+                <p>My professional journey</p>
             </div>
+
             <div class="card-grid">
-                <div class="row">
-                    <div class="card workCard">
-                        <div class="card-body">
-                            <div class="workCard-header">
-                                <p><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" class="calendar-icon me-2">
-                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                                            <line x1="16" y1="2" x2="16" y2="6"></line>
-                                            <line x1="8" y1="2" x2="8" y2="6"></line>
-                                            <line x1="3" y1="10" x2="21" y2="10"></line>
-                                        </svg></span>January 2022 - Present</p>
-                                <h3 class="card-title">Senior Fullstack Developer</h3>
-                            </div>
-                            <div class="workCard-details">
-                                <h5>Tech Solutions Inc.</h5>
-                                <p class="card-text">Leading development of enterprise web applications using React,
-                                    Node.js, and AWS. Mentoring junior developers and implementing best practices across
-                                    the team.
-                                </p>
-                            </div>
+                <div class="card card-hover">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <p class="date-text"><span><i class="bi bi-calendar"></i></span> January 2022 - Present</p>
+                            <h3 class="card-title">Senior Fullstack Developer</h3>
+                        </div>
+                        <div class="card-desc">
+                            <h5>Tech Solutions Inc.</h5>
+                            <p class="card-text">Leading development of enterprise web applications using React,
+                                Node.js, and AWS. Mentoring junior developers and implementing best practices across
+                                the team.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="card workCard">
-                        <div class="card-body">
-                            <div class="workCard-header">
-                                <p><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" class="calendar-icon me-2">
-                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                                            <line x1="16" y1="2" x2="16" y2="6"></line>
-                                            <line x1="8" y1="2" x2="8" y2="6"></line>
-                                            <line x1="3" y1="10" x2="21" y2="10"></line>
-                                        </svg></span>September 2014 - December 2022</p>
-                                <h3 class="card-title">Fullstack Developer</h3>
-                            </div>
-                            <div class="workCard-details">
-                                <h5>Digital Innovations Ltd.</h5>
-                                <p class="card-text">Developed and maintained multiple client projects using modern web
-                                    technologies. Collaborated with designers and product managers to deliver
-                                    high-quality solutions.
-                                </p>
-                            </div>
+                <div class="card card-hover">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <p class="date-text"><span><i class="bi bi-calendar"></i></span> September 2014 - December
+                                2022</p>
+                            <h3 class="card-title">Fullstack Developer</h3>
+                        </div>
+                        <div class="card-desc">
+                            <h5>Digital Innovations Ltd.</h5>
+                            <p class="card-text">Developed and maintained multiple client projects using modern web
+                                technologies. Collaborated with designers and product managers to deliver
+                                high-quality solutions.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -313,45 +305,33 @@
 
     <section id="education">
         <div class="container">
-            <div class="heading">
+
+            <div class="section-heading">
                 <h1>Education</h1>
-                <h4>My academic background</h4>
+                <p>My academic background</p>
             </div>
 
-            <div class="row">
-                <div class="card educationCard">
-                    <div class="card-body">
-                        <div class="d-flex align-items-start">
-                            <div class="edu-icon-container">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" style="color: var(--accent-blue)"
-                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                    class="edu-icon me-4">
-                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-                                </svg>
-                            </div>
+            <div class="card-grid justify-content-center">
+                <div class="card card-hover">
+                    <div class="card-body flex-row">
+                        <i class="bi bi-mortarboard edu-i"></i>
 
-                            <div class="educationCard-content">
+                        <div class="card-content d-flex flex-column">
+                            <div class="card-header">
                                 <h3 class="card-title">Bachelor of Science in Computer Science</h3>
                                 <p>University of Negros Occidental-Recoletos</p>
+                            </div>
 
-                                <div class="educationCard-details">
-                                    <p id="date-text">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" class="calendar-icon me-2">
-                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                                            <line x1="16" y1="2" x2="16" y2="6"></line>
-                                            <line x1="8" y1="2" x2="8" y2="6"></line>
-                                            <line x1="3" y1="10" x2="21" y2="10"></line>
-                                        </svg>2023 - 2027
-                                    </p>
-                                    <p class="card-text description-box">
-                                        Graduated with honors. Focused on Software Engineering, algorithms, web
-                                        technologies. Completed senior project on machine learning applications.
-                                    </p>
-                                </div>
+                            <div class="card-desc d-flex flex-column">
+                                <p class="date-text">
+                                    <span>
+                                        <i class="bi bi-calendar"></i>
+                                    </span> 2023 - 2027
+                                </p>
+                                <p class="card-text description-box">
+                                    Graduated with honors. Focused on Software Engineering, algorithms, web
+                                    technologies. Completed senior project on machine learning applications.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -360,13 +340,15 @@
         </div>
     </section>
 
-    <section id="contactme">
+    <section id="contact-me">
         <div class="container">
-            <div class="heading">
+
+            <div class="section-heading">
                 <h1>Contact Me</h1>
-                <h4>Let's work together</h4>
+                <p>Let's work together!</p>
             </div>
-            <div class="custom-form-container">
+
+            <div class="form-container">
                 <form action="">
                     <div class="name-row">
                         <div class="form-group">
@@ -389,8 +371,8 @@
                         <textarea id="message" placeholder="Enter message"></textarea>
                     </div>
 
-                    <div class="submit-container">
-                        <input type="submit" value="Submit" id="submitBtn">
+                    <div class="d-flex">
+                        <input type="submit" value="Submit" class="button button-accent ms-auto">
                     </div>
                 </form>
             </div>
@@ -398,19 +380,24 @@
     </section>
 
     <section id="cv">
-        <div class="container">
-            <div class="cvContent">
-                <h1 class="col-8">Download and check my Resume!</h1>
-                <div class="col-4">
-                    <button id="downloadBtn">Download</button>
+        <div class="container d-flex flex-row justify-content-between">
+            <div class="col-8">
+                <h2>Download and check my resume!</h2>
+            </div>
+            <div class="col-4">
+                <div class="d-flex">
+                    <button class="button button-accent ms-auto">Download</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>© 2026 John Doe. All rights reserved.</p>
+    <footer class="d-flex align-items-center justify-content-center">
+        <p class="footer-text">© 2026 John Doe. All rights reserved.</p>
     </footer>
+
+    <script src="/js/script.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>

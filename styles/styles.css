@@ -8,7 +8,7 @@
   --font: "Roboto", sans-serif;
 }
 
-
+/* defaults */
 body{
     margin: 0;
     font-family: var(--font);
@@ -16,6 +16,11 @@ body{
 
 * {
     font-family: var(--font) !important;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0 !important;
+    padding:0;
 }
 
 section{
@@ -29,28 +34,8 @@ section{
 a{
     text-decoration: none !important;
 }
-p{color: var(--text)}
 
-#header {
-    padding: 0;
-    background-color: var(--primary-gray);
-    
-}
-
-#header .container {
-      width: 80%;              
-    max-width: 1440px;   /* control how wide it can be */
-    margin: 0 auto;      /* center it */
-    padding: 10px 20px;  /* space inside left & right */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-h1, h2, h3, h4, h5, h6, p{
-    margin: 0 !important;
-    padding:0;
-}
+p{color: var(--text);}
 
 .card-title{
     margin-bottom: 24px !important;
@@ -68,6 +53,47 @@ h1, h2, h3, h4, h5, h6, p{
 .heading h4 {
     letter-spacing: 0.1em;
     font-size: 24px;
+}
+
+.text-container{
+    opacity: 0;
+    transition: 600ms ease;
+}
+
+.image{
+    opacity: 0;
+    filter: blur(2px); 
+    transform: translateY(30px); 
+    transition: all 0.8s ease-out; 
+    will-change: opacity, transform;
+}
+
+.observer-wrapper {
+    min-height: 400px; 
+    overflow: hidden; 
+}
+
+.skill-card-container, .project-card-container {
+    opacity: 0;
+
+    transform: translateY(40px) scale(0.95);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, opacity; 
+}
+
+/* Header section */
+#header {
+    padding: 0;
+    background-color: var(--primary-gray);
+}
+
+#header .container {
+    width: 80%;              
+    margin: 0 auto;      
+    padding: 10px 20px;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #logo, .menu > *{
@@ -88,11 +114,7 @@ h1, h2, h3, h4, h5, h6, p{
     padding: 0px 10px;
 }
 
-.menu a:hover{
-    transform: translateY(-2px);
-    transition: 0.2s all;
-}
-
+/* Hero section */
 #hero{
     background-color: var(--secondary-pearl);
     padding-bottom: 0px;
@@ -129,7 +151,7 @@ h1, h2, h3, h4, h5, h6, p{
     
 }
 
-
+/* About me section */
 #aboutme{
     background-color: var(--secondary-cream);
 }
@@ -140,14 +162,14 @@ h1, h2, h3, h4, h5, h6, p{
 
 #aboutme .col-6 {
     display: flex;
-    justify-content: center; /* Centers the image horizontally inside its column */
-    align-items: center;     /* Centers the image vertically inside its column */
+    justify-content: center; 
+    align-items: center;     
 }
 
 #aboutme .row > div{
     margin: auto;
-    justify-self: center; /* Centers the image horizontally */
-    align-items: center;     /* Centers the image vertically */
+    justify-self: center; 
+    align-items: center;    
 }
 
 #aboutme img{
@@ -161,6 +183,7 @@ h1, h2, h3, h4, h5, h6, p{
     color: var(--text);
 }
 
+/* Skills section */
 #skills{
     background-color: var(--secondary-pearl);
 }
@@ -170,38 +193,14 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .skillCard{
-    /* animation start */
-    position: relative; /* Required for absolute pseudo-elements */
+    position: relative; 
     z-index: 1;
     transition: color 0.3s;
-    /* animation xcode end */
     padding: 5px !important; 
-
     background-color: var(--secondary-pearl) !important;
-
-    /* 2. The Border (Width Style Color) */
     border: 1px solid var(--accent-blue) !important;
-
-    /* 3. The Corners */
-    border-radius: 4px !important; /* Forget the variable for a sec, let's see if this sticks */
-    
-    /* 4. The Magic Trick */
-    
+    border-radius: 4px !important; 
     overflow: hidden; 
-}
-.skillCard::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 0;
-    background-color: var(--secondary-cream); /* Faint blue tint */
-    z-index: -1; /* Place behind text */
-    transition: height 0.4s ease;
-}
-.skillCard:hover::before {
-    height: 100%; /* Fill the card background */
 }
 
 .skillCard .card-body .card-title{
@@ -222,54 +221,49 @@ h1, h2, h3, h4, h5, h6, p{
 
 .skill-item {
     margin-bottom: 20px;
-    text-align: left; /* Ensures labels align with the bar */
+    text-align: left; 
 }
 
 .skill-item label {
     display: block;
     font-weight: 400;
     font-size: 0.8rem;
-    letter-spacing: 0.1em; /* 10% Figma spacing */
-    color: #445a73; /* Muted slate from your image */
+    letter-spacing: 0.1em; 
+    color: #445a73; 
     margin-bottom: 8px;
 }
 
-/* The light background bar */
 .progress-track {
     width: 100%;
-    height: 6px; /* Very thin like your design */
-    background-color: var(--secondary-cream); /* Muted cream/grey background */
-    border-radius: 3px; /* Square ends as per the image */
+    height: 6px; 
+    background-color: var(--secondary-cream); 
+    border-radius: 3px; 
     overflow: hidden;
 }
 
-/* The dark blue fill */
 .progress-fill {
     height: 100%;
-    background-color: var(--accent-blue); /* The dark slate blue */
+    background-color: var(--accent-blue);
     border-radius: 0;
 }
 
-
-
-
+/* Project section */
 #projects{
     background-color: var(--secondary-cream);
 }
-
+#projects .heading > *{
+    color: var(--primary-brown);
+}
 .projectCard {
-    /* 1. The "Frame" */
     padding: 5px !important; 
     background-color: var(--secondary-cream) !important;
-
-    /* 2. The Border (Width Style Color) */
     border: 1px solid var(--primary-brown) !important;
-
-    /* 3. The Corners */
-    border-radius: 4px !important; /* Forget the variable for a sec, let's see if this sticks */
-    
-    /* 4. The Magic Trick */
+    border-radius: 2px !important; 
     overflow: hidden; 
+}
+
+.projectCard > img{
+    height: 12rem;
 }
 
 .projectCard .card-body h5, 
@@ -285,7 +279,6 @@ h1, h2, h3, h4, h5, h6, p{
     padding: 16px;
 }
 
-
 .projectBtn{
     display: inline-flex;
     background-color: var(--primary-brown); 
@@ -296,13 +289,8 @@ h1, h2, h3, h4, h5, h6, p{
     cursor: pointer;
     transition: all.3s;
 }
-.projectBtn:hover{
-    background-color: var(--accent-blue);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(201, 169, 110, .2);
-}
 
-
+/* Work experience section */
 #workexperience{
     background-color: var(--secondary-pearl);
 }
@@ -312,28 +300,14 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .workCard{
-    position: relative; /* Required for absolute pseudo-elements */
+    position: relative; 
     z-index: 1;
     transition: color 0.3s;
     background-color: var(--secondary-pearl) !important;
     border: 1px solid var(--accent-blue)!important;
     border-radius: 2px !important;
     margin-bottom: 16px;
-}
-
-.workCard::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 0;
-    background-color: var(--secondary-cream); /* Faint blue tint */
-    z-index: -1; /* Place behind text */
-    transition: height 0.2s ease;
-}
-.workCard:hover::before {
-    height: 100%; /* Fill the card background */
+    width: 75% !important;
 }
 
 .workCard-header p{
@@ -353,37 +327,25 @@ h1, h2, h3, h4, h5, h6, p{
     color: var(--text);
 }
 
+/* Education Section */
 #education{
     background-color: var(--secondary-cream);
 }
 
 #education .heading{
-    color: var(--text);
+    color: var(--accent-blue);
 }
 
 .educationCard{
-    position: relative; /* Required for absolute pseudo-elements */
+    position: relative; 
     z-index: 1;
     transition: color 0.3s;
     background-color: var(--secondary-cream) !important;
     border: 1px solid var(--accent-blue)!important;
     border-radius: 2px !important;
+    width: 75% !important; 
 }
 
-.educationCard::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 0;
-    background-color: var(--secondary-pearl); /* Faint blue tint */
-    z-index: -1; /* Place behind text */
-    transition: height 0.2s ease;
-}
-.educationCard:hover::before {
-    height: 100%; /* Fill the card background */
-}
 .educationCard-content > .card-title{
     color: var(--accent-blue);
     margin: 0 !important;
@@ -392,6 +354,12 @@ h1, h2, h3, h4, h5, h6, p{
     padding-bottom: 8px;
 }
 
+#date-text{
+    margin-bottom: 1rem !important;  
+}
+
+
+/* Contact me section */
 #contactme{
     background-color: var(--secondary-pearl) !important;
 }
@@ -401,9 +369,9 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .custom-form-container {
-    background-color: var(--secondary-pearl); /* Ensure this is defined in :root */
+    background-color: var(--secondary-pearl);
     padding: 30px;
-    border: 1px solid #999; /* Thin, neutral border like the image */
+    border: 1px solid var(--accent-blue); 
     max-width: 600px;
     margin: 20px auto;
 }
@@ -418,12 +386,12 @@ h1, h2, h3, h4, h5, h6, p{
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
-    flex: 1; /* Makes inputs grow to fill space */
+    flex: 1; 
 }
 
 input[type="text"], 
 textarea {
-    background-color: rgba(0, 0, 0, 0); /* Slight tint for the 'inset' look */
+    background-color: rgba(0, 0, 0, 0);
     border: 1px solid #abb2bf;
     padding: 10px;
     border-radius: 2px;
@@ -435,7 +403,7 @@ textarea {
 
 #submitBtn {
     display: inline-flex;
-    background-color: var(--accent-blue); /* Muted blue from your image */
+    background-color: var(--accent-blue); 
     color: white;
     border: none;
     padding: 10px 30px;
@@ -443,14 +411,18 @@ textarea {
     transition: all.3s;
 }
 
-#submitBtn:hover{
-    background-color: var(--primary-brown);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(201, 169, 110, .2);
-}
-
 #cv{
     background-color: var(--secondary-cream);
+}
+
+/* CV section */
+.cvContent{
+    align-items: center;
+    display:flex;
+}
+.cvContent > div{
+    display: flex;
+    justify-content: end;
 }
 
 .cvContent > h1 {
@@ -467,6 +439,83 @@ textarea {
     color: white;
     cursor: pointer;
     transition: all.3s;
+        width: 75%;
+}
+
+/* Footer section */
+footer{
+    background-color: var(--primary-gray);
+    padding: 8px 0px;
+}
+
+footer p {
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+
+/* Animation */
+.skillCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 0;
+    background-color: var(--secondary-cream); 
+    z-index: -1; 
+    transition: height 0.4s ease;
+}
+.skillCard:hover::before {
+    height: 100%;
+}
+
+.educationCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 0;
+    background-color: var(--secondary-pearl); 
+    z-index: -1; 
+    transition: height 0.2s ease;
+}
+.educationCard:hover::before {
+    height: 100%; 
+}
+
+.workCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 0;
+    background-color: var(--secondary-cream); 
+    z-index: -1; 
+    transition: height 0.2s ease;
+}
+.workCard:hover::before {
+    height: 100%; 
+}
+
+.menu a:hover{
+    transform: translateY(-2px);
+    transition: 0.2s all;
+}
+
+.projectBtn:hover{
+    background-color: var(--accent-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(201, 169, 110, .2);
+}
+
+#submitBtn:hover{
+    background-color: var(--primary-brown);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(201, 169, 110, .2);
 }
 
 #downloadBtn:hover{
@@ -475,16 +524,27 @@ textarea {
     box-shadow: 0 8px 30px rgba(201, 169, 110, .2);
 }
 
-footer{
-    background-color: var(--primary-gray);
-    padding: 8px 0px;
-
+.text-container.show{
+    opacity: 1;
 }
 
-footer p {
-    margin: 0;
-    color: white;
+.image.show{
+    opacity:1;
+    filter: blur(0);
+    transform: translateY(0);
 }
 
+.observer-wrapper.show .skill-card-container, .observer-wrapper.show .project-card-container {
+    opacity: 1;
+    position: relative; 
+    left: 0;
+    transform: translate(0, 0) scale(1);
+}
 
-/* Animation */
+.observer-wrapper.show .skill-card-container:nth-child(1) { transition-delay: 0.1s; }
+.observer-wrapper.show .skill-card-container:nth-child(2) { transition-delay: 0.3s; }
+.observer-wrapper.show .skill-card-container:nth-child(3) { transition-delay: 0.5s; }
+
+.observer-wrapper.show .project-card-container:nth-child(1) { transition-delay: 0.1s; }
+.observer-wrapper.show .project-card-container:nth-child(2) { transition-delay: 0.3s; }
+.observer-wrapper.show .project-card-container:nth-child(3) { transition-delay: 0.5s; }
